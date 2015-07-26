@@ -169,6 +169,7 @@ names(data_mean_std_tbl)
 
 str(data_mean_std_tbl)
 
+# Search and replace in the names
 
 clean_names <- names(data_mean_std_tbl)
 clean_names
@@ -205,12 +206,12 @@ data_mean_std_tbl$subject <- as.factor(as.character(data_mean_std_tbl$subject))
 library(tidyr)
 data_long <- gather(data_mean_std_tbl, key = "measurement", value = "value", 3:68)
 str(data_long)
-glimpse(data_long)
-
-data_long
 
 tidy_data <- data_long %>% group_by(subject, activity_label, measurement) %>% summarise(mean(value)) 
 str(tidy_data)
+
+# rename some columns
+
 colnames(tidy_data)[2] <- "activity"
 colnames(tidy_data)[4] <- "mean_value"
 
