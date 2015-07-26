@@ -66,14 +66,10 @@ img {
 
 <p>This repository contains files for the course assignment of “Getting and Cleaning Data” course on Coursera.</p>
 <p>There is a script <a href="run_analysis.R">“run_analysis.R”</a> that processes the raw data, provided for the assignment and produces as an output <a href="tidy_data.txt">“tidy_data.txt”</a>, which is a dataset in a tidy format (long), containing 11880 observations of 4 variables.</p>
-<ul>
-<li>Notes on running the script *</li>
-</ul>
+<p><strong>Notes on running the script</strong></p>
 <p>The raw data is located in a subfolder data. The script links to them relatively. Assuming that you download the repository and set your R working environment to the base repository directory, it should be able to open the data files correctly.</p>
 <p>The script describes in details the steps taken to get the processed data, using comments. It also uses the R packages <a href="https://cran.r-project.org/web/packages/dplyr/">dplyr</a> and <a href="https://cran.r-project.org/web/packages/tidyr/index.html">tidyr</a>, so if you don’t have them installed do so using install.packages(“dplyr”) and install.packages(“tidyr”).</p>
-<ul>
-<li>Notes on the output data *</li>
-</ul>
+<p><strong>Notes on the output data</strong></p>
 <p>The data, produced by the script is in a file <a href="tidy_data.txt">“tidy_data.txt”</a>. To load it properly, you need to run the command</p>
 <pre class="r"><code>tidy.df &lt;- read.table(&quot;tidy_data.txt&quot;, header = TRUE)</code></pre>
 <p>The output data is described in a <a href="CodeBook.md">CodeBook.md</a> file in this repository.</p>
